@@ -4,6 +4,7 @@ const cors = require('cors')
 require('dotenv').config()
 const bodyParser = require('body-parser');
 app.use(express.json());
+app.set('trust proxy', true)
 
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: false}));
